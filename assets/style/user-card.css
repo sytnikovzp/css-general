@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+}
+:root{
+  --rad: 50px;
+}
+div{
+  border: 1px solid red;
+}
+.container{
+  border: 5px solid midnightblue;
+  border-radius: var(--rad);
+  width: 450px;
+  height: 600px;
+}
+.header{
+  weight: 100%;
+  height: 30%;
+  border-top-left-radius: calc(var(--rad) - 10px);
+  border-top-right-radius: calc(var(--rad) - 10px);
+  background-image: url('../images/photo_5264985651667916826_x.jpg');
+}
+.img-container{
+  weight: 240px;
+  height: 240px;
+
+}

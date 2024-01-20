@@ -6,7 +6,7 @@
   border: 5px solid blue;
   display: grid;
   /* width: 900px; */
-  /* height: 400px; */
+  height: 400px;
   /* grid-template-columns: 1fr 1fr 1fr; */
 
   /* grid-template-columns: [a]1fr [b]1fr [c]1fr [d]1fr [e]1fr [f];
@@ -18,8 +18,8 @@
   /* grid-template-columns: repeat(auto-fill, 100px); */
   /* fill - заполнить, создает лишние столбцы */
   /* fit - сделать подходящее, не создает лишние столбцы */
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 50px);
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(3, 100px);
 
   /* Implicit grid */
   /* grid-auto-rows: 100px; */
@@ -27,23 +27,30 @@
   /* column-gap: 10px;
   row-gap: 15px; */
 
-  gap: 10px 15px;
+  /* gap: 10px 15px; */
 
   /* grid-template-areas: "a . . . ." ". . . c c" "b b . c c"; */
 
-  grid-template: 
+  /* grid-template: 
   "a . . . ." 50px
   ". . . c c" 70px
   "b b . c c" 100px
   "b b . c c" 150px
   / 100px 1fr 1fr 100px 100px
-  ;
+  ; */
 
   /* grid-auto-flow: column; */
   
-  grid-auto-flow: column dense;
+  grid-auto-flow: dense;
   /* разместить плотно */
+  justify-content: center;
+  align-content: center;
 
+  justify-items: center;
+  /* по горизонтали */
+
+  align-items: start;
+  /* по вертикали or place-items */
 
 }
 
@@ -56,7 +63,7 @@
   /* grid-column: 1;
   grid-row: 1; */
 
-  grid-area: a;
+  /* grid-area: a; */
 }
 
 .grid-item:nth-child(2) {
@@ -72,7 +79,15 @@
 
   /* grid-row: 3; */
 
-  grid-area: b;
+  /* grid-area: b; */
+
+  /* justify-self: stretch;
+  align-self: stretch; */
+
+  place-self: stretch stretch;
+
+  /* order: -1; */
+  /* можно менять визуальный порядок отображения элементов */
 }
 
 .grid-item:nth-child(3) {
@@ -89,7 +104,7 @@
   /* grid-area: 2 / 4 / 4 / 6; */
   /* задать линиями */
 
-  grid-area: c;
+  /* grid-area: c; */
 }
 
 .grid-item:nth-child(7) {
@@ -99,8 +114,15 @@
 
 .grid-item {
   outline: 2px solid green;
-  font-size: 40px;
-  display: flex;
+  font-size: 20px;
+
+
+  /* display: flex;
+  flex-direction: column; */
+
+  display: grid;
+
+
   justify-content: center;
   align-items: center;
 }

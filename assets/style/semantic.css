@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  /* border: 2px solid black; */
+  background-color: forestgreen;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 16%);
+}
+
+header,
+nav,
+footer {
+  grid-column: span 3;
+  border: 2px solid black;
+}
+
+main {
+  grid-column: span 2;
+  grid-row: 3 / span 3;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+aside {
+  grid-column: 3;
+  grid-row: 3 / span 3;
+  border: 2px solid black;
+}

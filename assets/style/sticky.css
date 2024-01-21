@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  max-width: 1200px;
+  min-width: 500px;
+  margin: 10px auto;
+  top: 30px;
+  left: 0;/* растянуть элемент на ширину родителя */
+  right: 0;/*растянуть элемент на ширину родителя */
+  z-index: 1;
+}
+
+.menu-item {
+	/* width: 150px; *//*растянуть элемент на ширину родителя*/
+	height: 30px;
+  margin: auto;
+	border: 2px solid blue;
+	border-radius: 5px;
+	text-align: center;
+	background-color: darkslateblue;
+}
+
+.menu-item > a {
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+
+dl {
+  margin: 0;
+  padding: 24px 0 0 0;
+  /* border: 3px solid red; */
+}
+
+dt {
+  background: #B8C1C8;
+  border-bottom: 1px solid #989EA4;
+  border-top: 1px solid #717D85;
+  color: #FFF;
+  font: bold 18px/21px Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 2px 0 0 12px;
+  position: sticky;
+  top: -1px;
+}
+
+dd {
+  font: bold 20px/45px Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0 0 0 20px;
+  white-space: nowrap;
+}
+
+dd + dd {
+  border-top: 2px dashed #CCC;
+}

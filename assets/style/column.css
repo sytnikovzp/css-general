@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-flow: column; 
+  /* flex direction & flex wrap */
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+h1{
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  column-span: all;
+}
+
+.content{
+  /* columns: 3 auto; */
+  column-count: 3;
+  column-width: 200px;
+  column-gap: 60px;
+  column-rule: 3px solid red;
+}
